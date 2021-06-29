@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.main-desktop {
+  width: 100vw;
+  max-width: 177.78vh;
+  /* 16/9 = 1.778 */
+  height: calc(56.25vw - 2rem);
+  /* height:width ratio = 9/16 = .5625  */
+  max-height: calc(100vh - 2rem);
+  background: url("../../../assets/img/win11.jpg");
+  background-size: cover;
+  position: relative;
+
+  nav {
+    display: flex;
+    width: 100%;
+    height: 2.75rem;
+    border: 1px solid #fff;
+    //border-radius: 4px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+
+    &::before {
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
